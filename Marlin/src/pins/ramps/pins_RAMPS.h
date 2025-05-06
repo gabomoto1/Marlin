@@ -75,7 +75,7 @@
   #define SERVO2_PIN                           5
 #endif
 #ifndef SERVO3_PIN
-  #define SERVO3_PIN                           4
+  #define SERVO3_PIN                           -1//4//DESHABILITADO PARA EL MIN Z PROBE
 #endif
 
 //
@@ -83,10 +83,10 @@
 //
 #ifndef X_STOP_PIN
   #ifndef X_MIN_PIN
-    #define X_MIN_PIN                          3
+    #define X_MIN_PIN                          2
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                          2
+    #define X_MAX_PIN                          3
   #endif
 #endif
 #ifndef Y_STOP_PIN
@@ -99,10 +99,10 @@
 #endif
 #ifndef Z_STOP_PIN
   #ifndef Z_MIN_PIN
-    #define Z_MIN_PIN                         18
+    #define Z_MIN_PIN                         4//18//DESABILITADO POR EL Z2 SERIAL
   #endif
   #ifndef Z_MAX_PIN
-    #define Z_MAX_PIN                         19
+    #define Z_MAX_PIN                         19//DESABILITADO POR EL Z2 SERIAL
   #endif
 #endif
 
@@ -131,52 +131,52 @@
 #endif
 
 #ifndef Z_STEP_PIN
-  #define Z_STEP_PIN                          46
+  #define Z_STEP_PIN                          26//46
 #endif
 #ifndef Z_DIR_PIN
-  #define Z_DIR_PIN                           48
+  #define Z_DIR_PIN                           28//48
 #endif
 #ifndef Z_ENABLE_PIN
-  #define Z_ENABLE_PIN                        62
+  #define Z_ENABLE_PIN                        24//62
 #endif
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                            40
+  #define Z_CS_PIN                            42//40
 #endif
 
 #ifndef E0_STEP_PIN
-  #define E0_STEP_PIN                         26
+  #define E0_STEP_PIN                         46//26
 #endif
 #ifndef E0_DIR_PIN
-  #define E0_DIR_PIN                          28
+  #define E0_DIR_PIN                          48//28
 #endif
 #ifndef E0_ENABLE_PIN
-  #define E0_ENABLE_PIN                       24
+  #define E0_ENABLE_PIN                       62//24
 #endif
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                           42
+  #define E0_CS_PIN                           40//42
 #endif
 
-#ifndef E1_STEP_PIN
-  #define E1_STEP_PIN                         36
+#ifndef Z2_STEP_PIN
+  #define Z2_STEP_PIN                         36
 #endif
-#ifndef E1_DIR_PIN
-  #define E1_DIR_PIN                          34
+#ifndef Z2_DIR_PIN
+  #define Z2_DIR_PIN                          34
 #endif
-#ifndef E1_ENABLE_PIN
-  #define E1_ENABLE_PIN                       30
+#ifndef Z2_ENABLE_PIN
+  #define Z2_ENABLE_PIN                       30
 #endif
-#ifndef E1_CS_PIN
-  #define E1_CS_PIN                           44
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                           44
 #endif
 
 //
 // Temperature Sensors
 //
 #ifndef TEMP_0_PIN
-  #define TEMP_0_PIN                          13  // Analog Input
+  #define TEMP_0_PIN                          15//13  // Analog Input
 #endif
 #ifndef TEMP_1_PIN
-  #define TEMP_1_PIN                          15  // Analog Input
+  #define TEMP_1_PIN                          13//15  // Analog Input
 #endif
 #ifndef TEMP_BED_PIN
   #define TEMP_BED_PIN                        14  // Analog Input
@@ -315,7 +315,7 @@
   //#define Y_HARDWARE_SERIAL Serial1
   //#define Y2_HARDWARE_SERIAL Serial1
   //#define Z_HARDWARE_SERIAL Serial1
-  //#define Z2_HARDWARE_SERIAL Serial1
+  #define Z2_HARDWARE_SERIAL Serial1
   //#define E0_HARDWARE_SERIAL Serial1
   //#define E1_HARDWARE_SERIAL Serial1
   //#define E2_HARDWARE_SERIAL Serial1
@@ -427,15 +427,15 @@
 #endif
 
 //
-// AUX1    5V  GND D1  D0
+// AUX1    5V  GND D2  D1
 //          2   4   6   8
 //          1   3   5   7
 //         5V  GND A3  A4
 //
 #define AUX1_05_PIN                           57  // (A3)
-#define AUX1_06_PIN                            1  // TX0
+#define AUX1_06_PIN                            2
 #define AUX1_07_PIN                           58  // (A4)
-#define AUX1_08_PIN                            0  // RX0
+#define AUX1_08_PIN                            1
 
 //
 // AUX2    GND A9 D40 D42 A11
