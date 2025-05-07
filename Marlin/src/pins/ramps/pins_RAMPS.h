@@ -76,7 +76,7 @@
   #define SERVO2_PIN                           5
 #endif
 #ifndef SERVO3_PIN
-  #define SERVO3_PIN                           4
+  #define SERVO3_PIN                           -1//4//DESHABILITADO PARA EL MIN Z PROBE
 #endif
 
 //
@@ -109,10 +109,10 @@
 //
 #ifndef X_STOP_PIN
   #ifndef X_MIN_PIN
-    #define X_MIN_PIN                          3  // X-
+    #define X_MIN_PIN                          2  // X-
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                          2  // X+
+    #define X_MAX_PIN                          3  // X+
   #endif
 #endif
 #ifndef Y_STOP_PIN
@@ -125,10 +125,10 @@
 #endif
 #ifndef Z_STOP_PIN
   #ifndef Z_MIN_PIN
-    #define Z_MIN_PIN                         18  // Z-
+    #define Z_MIN_PIN                         4//18//DESABILITADO POR EL Z2 SERIAL
   #endif
   #ifndef Z_MAX_PIN
-    #define Z_MAX_PIN                         19  // Z+
+    #define Z_MAX_PIN                         19//DESABILITADO POR EL Z2 SERIAL
   #endif
 #endif
 
@@ -142,67 +142,67 @@
 //
 // Steppers
 //
-#define X_STEP_PIN                            54  // (A0)
-#define X_DIR_PIN                             55  // (A1)
+#define X_STEP_PIN                            54
+#define X_DIR_PIN                             55
 #define X_ENABLE_PIN                          38
 #ifndef X_CS_PIN
-  #define X_CS_PIN                       AUX3_06
+  #define X_CS_PIN                            53
 #endif
 
 #define Y_STEP_PIN                            60
 #define Y_DIR_PIN                             61
-#define Y_ENABLE_PIN                          56  // (A2)
+#define Y_ENABLE_PIN                          56
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN                       AUX3_02
+  #define Y_CS_PIN                            49
 #endif
 
 #ifndef Z_STEP_PIN
-  #define Z_STEP_PIN                          46
+  #define Z_STEP_PIN                          26//46
 #endif
 #ifndef Z_DIR_PIN
-  #define Z_DIR_PIN                           48
+  #define Z_DIR_PIN                           28//48
 #endif
 #ifndef Z_ENABLE_PIN
-  #define Z_ENABLE_PIN                        62
+  #define Z_ENABLE_PIN                        24//62
 #endif
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                       AUX2_06
+  #define Z_CS_PIN                            42//40
 #endif
 
 #ifndef E0_STEP_PIN
-  #define E0_STEP_PIN                         26
+  #define E0_STEP_PIN                         46//26
 #endif
 #ifndef E0_DIR_PIN
-  #define E0_DIR_PIN                          28
+  #define E0_DIR_PIN                          48//28
 #endif
 #ifndef E0_ENABLE_PIN
-  #define E0_ENABLE_PIN                       24
+  #define E0_ENABLE_PIN                       62//24
 #endif
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                      AUX2_08
+  #define E0_CS_PIN                           40//42
 #endif
 
-#ifndef E1_STEP_PIN
-  #define E1_STEP_PIN                         36
+#ifndef Z2_STEP_PIN
+  #define Z2_STEP_PIN                         36
 #endif
-#ifndef E1_DIR_PIN
-  #define E1_DIR_PIN                          34
+#ifndef Z2_DIR_PIN
+  #define Z2_DIR_PIN                          34
 #endif
-#ifndef E1_ENABLE_PIN
-  #define E1_ENABLE_PIN                       30
+#ifndef Z2_ENABLE_PIN
+  #define Z2_ENABLE_PIN                       30
 #endif
-#ifndef E1_CS_PIN
-  #define E1_CS_PIN                      AUX2_07
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                           44
 #endif
 
 //
 // Temperature Sensors
 //
 #ifndef TEMP_0_PIN
-  #define TEMP_0_PIN                          13  // Analog Input
+  #define TEMP_0_PIN                          15//13  // Analog Input
 #endif
 #ifndef TEMP_1_PIN
-  #define TEMP_1_PIN                          15  // Analog Input
+  #define TEMP_1_PIN                          13//15  // Analog Input
 #endif
 #ifndef TEMP_BED_PIN
   #define TEMP_BED_PIN                        14  // Analog Input
@@ -212,7 +212,7 @@
 // SPI for MAX Thermocouple
 //
 #ifndef TEMP_0_CS_PIN
-  #define TEMP_0_CS_PIN                  AUX2_09  // Don't use 53 if using Display/SD card (SDSS) or 49 (SD_DETECT_PIN)
+  #define TEMP_0_CS_PIN                       66  // Don't use 53 if using Display/SD card (SDSS) or 49 (SD_DETECT_PIN)
 #endif
 
 //
@@ -372,7 +372,7 @@
   //#define Y_HARDWARE_SERIAL Serial1
   //#define Y2_HARDWARE_SERIAL Serial1
   //#define Z_HARDWARE_SERIAL Serial1
-  //#define Z2_HARDWARE_SERIAL Serial1
+  #define Z2_HARDWARE_SERIAL Serial1
   //#define E0_HARDWARE_SERIAL Serial1
   //#define E1_HARDWARE_SERIAL Serial1
   //#define E2_HARDWARE_SERIAL Serial1

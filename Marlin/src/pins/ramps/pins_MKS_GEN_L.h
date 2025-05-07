@@ -43,13 +43,13 @@
   #define MOSFET_A_PIN                        10  // HE0
 #endif
 #ifndef MOSFET_B_PIN
-  #define MOSFET_B_PIN                         7  // HE1 or FAN Hotend Cooling
+  #define MOSFET_B_PIN                         9  // HE1 or FAN Hotend Cooling
 #endif
 #ifndef MOSFET_C_PIN
   #define MOSFET_C_PIN                         8  // H-BED
 #endif
 #ifndef MOSFET_D_PIN
-  #define MOSFET_D_PIN                         9  // FAN Part Cooling
+  #define MOSFET_D_PIN                         7  // FAN Part Cooling
 #endif
 
 // Always assign these to their labeled counterparts
