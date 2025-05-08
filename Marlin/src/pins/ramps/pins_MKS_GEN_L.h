@@ -59,7 +59,7 @@
 #endif
 #define HEATER_BED_PIN              MOSFET_C_PIN
 
-#define FAN0_PIN                    MOSFET_D_PIN
+#define FAN0_PIN                    MOSFET_B_PIN
 #if ENABLED(FET_ORDER_EFF)
   #define FAN1_PIN                  MOSFET_B_PIN
 #endif
