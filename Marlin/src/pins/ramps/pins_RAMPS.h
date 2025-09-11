@@ -73,7 +73,7 @@
   #define SERVO1_PIN                           6
 #endif
 #ifndef SERVO2_PIN
-  #define SERVO2_PIN                           5
+  #define SERVO2_PIN                           -1//4//DESHABILITADO PARA EL MIN Z PROBE
 #endif
 #ifndef SERVO3_PIN
   #define SERVO3_PIN                           -1//4//DESHABILITADO PARA EL MIN Z PROBE
@@ -117,7 +117,7 @@
 #endif
 #ifndef Y_STOP_PIN
   #ifndef Y_MIN_PIN
-    #define Y_MIN_PIN                         14  // Y-
+    #define Y_MIN_PIN                         -1//14  // Y-
   #endif
   #ifndef Y_MAX_PIN
     #define Y_MAX_PIN                         15  // Y+
@@ -125,7 +125,7 @@
 #endif
 #ifndef Z_STOP_PIN
   #ifndef Z_MIN_PIN
-    #define Z_MIN_PIN                         4//18//DESABILITADO POR EL Z2 SERIAL
+    #define Z_MIN_PIN                         14//18//DESABILITADO POR EL Z2 SERIAL
   #endif
   #ifndef Z_MAX_PIN
     #define Z_MAX_PIN                         19//DESABILITADO POR EL Z2 SERIAL
